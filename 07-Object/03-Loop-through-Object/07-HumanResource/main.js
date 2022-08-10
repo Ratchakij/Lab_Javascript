@@ -19,3 +19,20 @@ const employees = {
     address: { district: "Sriraja", province: "Chonburi" },
   },
 };
+
+const getEmployees = (obj) => {
+  let name = prompt("Enter employee name");
+  if (!obj[name] || name === null || name === "" || name.trim() === "") {
+    return alert("Note Found");
+  } else {
+    let salary = obj[name].salary;
+    let district = obj[name].address.district;
+    let province = obj[name].address.province;
+
+    let result = alert(
+      `Name: ${name}, salary:${salary}, address:${district}, ${province}`
+    );
+    return result;
+  }
+};
+console.log(getEmployees(employees));
