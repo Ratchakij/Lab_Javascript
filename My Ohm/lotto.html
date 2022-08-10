@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+    <h1 id="result"></h1>
+    <h1>Your lotto number is</h1>
+    <p id="Your_Number"></p>
+    <h1>Lotto number winner is</h1>1
+    <p id="random"></p>
+
+    <script>
+        let Lotto_Number = prompt("Your Number");
+        let Random_Number = Math.floor(Math.random() * 100);
+        console.log(Random_Number);
+       
+        document.getElementById("Your_Number").innerHTML = Lotto_Number
+        document.getElementById("random").innerHTML = Random_Number
+       
+        if(Lotto_Number == Random_Number ){
+            document.getElementById("result").innerHTML = "Your Winner"
+        }
+        else{
+            document.getElementById("result").innerHTML = "Your Lose"
+        }
+    </script>
+</html>
